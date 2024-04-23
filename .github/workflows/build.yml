@@ -28,6 +28,9 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
+          context: .
           push: true
           platforms: linux/arm64
           tags: kinanlak/meilisync-arm:latest
+          cache-from: type=registry,ref=kinanlak/meilisync:buildcache
+          cache-to: type=registry,ref=kinanlak/meilisync:buildcache,mode=max
