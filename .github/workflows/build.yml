@@ -23,7 +23,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: long2ice/meilisync
+          images: kinanlak/meilisync-arm
           tags: |
             type=schedule
             type=ref,event=branch
